@@ -56,12 +56,11 @@
 
 - CSS 배치 필수 속성
     - display : flex;
-    <!--가로 or 세로 결정-->
-    - flex-direction : row, reverse-row, column, reverse-column;
-    <!--가로정렬-->
+    - flex-direction : row, reverse-row, column, reverse-column;    <br>-> 가로 or 세로 결정
     - justify-content : flex-start, center, flex-end;
-    <!--세로정렬-->
+        <br> -> 가로정렬
     - align-items : flex-start, center, flex-end;
+        <br> -> 세로정렬
 
 <br>
 
