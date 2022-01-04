@@ -3,14 +3,16 @@
 - JavaScript 개요
 
 <br>
+
 <details>
-<summary> 단축키 </sumary>
-    <div markdown = "1">
-    웹으로 연결하기 `Alt` + `B` <br>
-    개발자 도구 `ctrl` + `shift` + `I`
+<summary>단축키</summary>
+<div markdown="1">       
+
+웹으로 연결하기 `Alt` + `B` <br>
+개발자 도구 `ctrl` + `shift` + `I`
+
 </div>
 </details>
-
 
 <br>
 
