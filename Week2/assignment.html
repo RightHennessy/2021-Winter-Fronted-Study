@@ -1,0 +1,31 @@
+<body>
+    <script>
+        // 1. string 만들어서 문자추가
+        var str1 = ''
+        var str2 = 'X'
+        for(let i =0; i<5; i++){            
+            str1 += '*'
+            str2 += 'X'
+            console.log(str1)
+            console.log(str2)
+            str1 += '*'
+            str2 += 'X'
+        }
+
+        // 2. 줄바꿈 없는 출력 process.stdout.write() -> 이거 실행 왜 안댐 ?
+        let j=0;
+        for(let i =0; i<5; i++){
+           for(j=0; j<2*i+1; j++)
+                process.stdout.write('*')
+            for(j=0; j<2*i+2; j++)
+                process.stdout.write('X')
+            
+        }
+
+        // 3. repeat()함수 이용
+        for(let i =0; i<5; i++){
+            console.log('*'.repeat(2*i+1))
+            console.log('X'.repeat(2*i+2))
+        }
+    </script>
+</body>
