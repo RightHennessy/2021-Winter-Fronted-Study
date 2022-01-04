@@ -1,0 +1,16 @@
+<body>
+    <h1 id = "hello">Hello World</h1>
+
+    <script>
+        const hello = document.querySelector("#hello")
+
+        console.log(hello)
+        console.dir(hello)
+
+        setTimeout(() => {
+            hello.innerHTML = 'Hello JavaScript'
+            hello.style.color = 'red'
+        }, 3000)
+    </script>
+</body>
+
