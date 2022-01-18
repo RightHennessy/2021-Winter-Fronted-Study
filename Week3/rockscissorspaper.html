@@ -1,14 +1,14 @@
 <body>
     <div> 유저의 선택
-    <button id="btn01">가위</button>
-    <button id="btn02">바위</button>
-    <button id="btn03">보</button>
+    <button id="btn01">✌</button>
+    <button id="btn02">✊</button>
+    <button id="btn03">🖐</button>
     </div>
 
     <br />
-
+    
     <div> 컴퓨터의
-        <button id="com1"> 선택  <div id="com2">  </div> </button> 
+        <button id="com1">  <div id="com2">  </div> </button> 
         
     </div>
 
@@ -32,36 +32,43 @@
         const com = document.getElementById('com1')
         const choice = document.getElementById('com2')
 
+        var userNumb = 0
         result.innerHTML = '결과 : 대기 중'
+        choice.innerHTML = '선택'
         reset.style.visibility = "hidden";
 
         // 이벤트 부여
         sci.addEventListener('click', (e)=>{
             alert('가위')
-            let userNumb = 0
+            userNumb = 0
             disabledFunc()
         })
         rock.addEventListener('click', (e)=>{
-            let userNumb=1
+            userNumb=1
             alert('바위')
             disabledFunc()
         })
         paper.addEventListener('click', (e)=>{
-            let userNumb=2
+            userNumb=2
             alert('보')
             disabledFunc()
         })
 
-        com.addEventListner('click',(e)=>{
-            let randNumb = random()
-            calculate(userNumb, randNumb)
+        
+        com.addEventListener('click', (e)=>{
+            var randNumb = random()
+            com.disabled = true
+            result.innerHTML = calculate(userNumb, randNumb)
+            reset.style.visibility = "visible"
         })
 
         reset.addEventListener('click', (e)=>{
             abledFunc()
             choice.innerHTML = '대기 중'
             result.innerHTML = '결과 : 대기 중'
-            reset.style.visibility = "visible";
+            choice.innerHTML = '선택'
+            com.disabled = false
+            reset.style.visibility = "hidden";
         })
 
         // 버튼 비활성화 버튼, 버튼 3개 모두 비활성화
@@ -96,13 +103,11 @@
 
         function calculate(userNumb, randNumb) {
             if(userNumb == randNumb)
-                result.innerHTML = '결과 : 비겼습니다.'
-            
-            if((userNumb==0 && randNumb==2) || (userNumb==1 && randNumb==0) || (userNumb==2 && randNumb==1))
-                result.innerHTML = '결과 : 이겼습니다'
-            
-            if((userNumb==2 && randNumb==0) || (userNumb==0 && randNumb==1) || (userNumb==1 && randNumb==2))
-                result.innerHTML = '졌습니다'
+                return '결과 : 비겼습니다.'
+            else if((userNumb==0 && randNumb==2) || (userNumb==1 && randNumb==0) || (userNumb==2 && randNumb==1))
+                return '결과 : 이겼습니다'
+            else if((userNumb==2 && randNumb==0) || (userNumb==0 && randNumb==1) || (userNumb==1 && randNumb==2))
+                return '결과 : 졌습니다'
         }
 
 
