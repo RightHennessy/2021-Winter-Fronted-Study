@@ -3,14 +3,16 @@
 - JavaScript 개요
 
 <br>
+
 <details>
-<summary> 단축키 </sumary>
-    <div markdown = "1">
-    웹으로 연결하기 `Alt` + `B` <br>
-    개발자 도구 `ctrl` + `shift` + `I`
+<summary>단축키</summary>
+<div markdown="1">       
+
+웹으로 연결하기 `Alt` + `B` <br>
+개발자 도구 `ctrl` + `shift` + `I`
+
 </div>
 </details>
-
 
 <br>
 
@@ -34,7 +36,7 @@ prototype 기반 언어 - [참고자료](https://medium.com/@limsungmook/%EC%9E%
 
 ## 변수와 함수
 
-<br>
+
 
 `var` 지역 및 전역 변수 선언, 유동적으로 할당 값 변경 가능 <br>
 `let` 블록 범위 지역 변수 선언, 변수에 재할당 가능 (재선언 불가능) <br>
@@ -56,7 +58,7 @@ prototype 기반 언어 - [참고자료](https://medium.com/@limsungmook/%EC%9E%
 
 ## DOM 제어
 
-<br>
+
 DOM = document - HTML <br>
 
 [참고자료](https://grace-go.tistory.com/78)
@@ -66,10 +68,10 @@ DOM = document - HTML <br>
 ## 과제
 1. [별찍기 구현](https://github.com/RightHennessy/2021-Winter-Fronted-Study/blob/main/Week2/assignment.html)
 
-2. JavaScript 이벤트리스너 종류
-<br>
-[이벤트 리스너란?](https://ordinary-code.tistory.com/64) <br>
-[이벤트 리스너 종류](https://yoonjong-park.tistory.com/entry/addEventListener-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A6%AC%EC%8A%A4%EB%84%88-%EC%A2%85%EB%A5%98)
+2. JavaScript 이벤트리스너 종류 <br>
+
+    [이벤트 리스너란?](https://ordinary-code.tistory.com/64) <br>
+    [이벤트 리스너 종류](https://yoonjong-park.tistory.com/entry/addEventListener-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A6%AC%EC%8A%A4%EB%84%88-%EC%A2%85%EB%A5%98)
 
 
 3. Git, Github 개념 조사 - [참고자료](https://velog.io/@gparkkii/GitGithub)
