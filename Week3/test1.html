@@ -1,0 +1,19 @@
+<body>
+    <h1 id = "hello"> Hello World </h1>
+
+    <script>
+        const hello = document.querySelector('#hello')
+
+        // 방법1
+        hello.addEventListener('click', (e) => {
+            console.log(e)
+            alert('Click')
+        })
+
+        // 방법2
+        hello.addEventListener('click', function(e) {
+            console.log(e)
+            alert('Click')
+        })
+    </script>
+</body>
