@@ -1,0 +1,110 @@
+<body>
+    <div> 유저의 선택
+    <button id="btn01">가위</button>
+    <button id="btn02">바위</button>
+    <button id="btn03">보</button>
+    </div>
+
+    <br />
+
+    <div> 컴퓨터의
+        <button id="com1"> 선택  <div id="com2">  </div> </button> 
+        
+    </div>
+
+    <br />
+
+ 
+    <div id="result"> </div>
+    
+    
+    <br />
+
+    <button id="btn04">다시하기</button>
+
+    <script>
+        // DOM 생성
+        const sci = document.getElementById('btn01')
+        const rock = document.getElementById('btn02')
+        const paper = document.getElementById('btn03')
+        const reset = document.getElementById('btn04')
+
+        const com = document.getElementById('com1')
+        const choice = document.getElementById('com2')
+
+        result.innerHTML = '결과 : 대기 중'
+        reset.style.visibility = "hidden";
+
+        // 이벤트 부여
+        sci.addEventListener('click', (e)=>{
+            alert('가위')
+            let userNumb = 0
+            disabledFunc()
+        })
+        rock.addEventListener('click', (e)=>{
+            let userNumb=1
+            alert('바위')
+            disabledFunc()
+        })
+        paper.addEventListener('click', (e)=>{
+            let userNumb=2
+            alert('보')
+            disabledFunc()
+        })
+
+        com.addEventListner('click',(e)=>{
+            let randNumb = random()
+            calculate(userNumb, randNumb)
+        })
+
+        reset.addEventListener('click', (e)=>{
+            abledFunc()
+            choice.innerHTML = '대기 중'
+            result.innerHTML = '결과 : 대기 중'
+            reset.style.visibility = "visible";
+        })
+
+        // 버튼 비활성화 버튼, 버튼 3개 모두 비활성화
+        const disabledFunc = function(){
+            sci.disabled = true
+            rock.disabled = true
+            paper.disabled = true
+        }
+
+        const abledFunc = function(){
+            sci.disabled = false
+            rock.disabled = false
+            paper.disabled = false
+        }
+
+        // 1~3 난수 생성
+        function random() {
+            let randNum = Math.floor(Math.random()*(3));
+
+            if(randNum == 0)
+                choice.innerHTML = '✌'
+            else if(randNum ==1)
+                choice.innerHTML = '✊'
+            else if(randNum ==2)
+                choice.innerHTML = '🖐'
+            else
+                choice.innerHTML = 'null'
+            
+            return randNum
+
+        }
+
+        function calculate(userNumb, randNumb) {
+            if(userNumb == randNumb)
+                result.innerHTML = '결과 : 비겼습니다.'
+            
+            if((userNumb==0 && randNumb==2) || (userNumb==1 && randNumb==0) || (userNumb==2 && randNumb==1))
+                result.innerHTML = '결과 : 이겼습니다'
+            
+            if((userNumb==2 && randNumb==0) || (userNumb==0 && randNumb==1) || (userNumb==1 && randNumb==2))
+                result.innerHTML = '졌습니다'
+        }
+
+
+    </script>
+</body>                                   
